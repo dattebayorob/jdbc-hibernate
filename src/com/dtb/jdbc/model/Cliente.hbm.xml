@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 6, 2019 9:59:01 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.dtb.jdbc.model.Cliente" table="cliente" schema="teste2">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="cpf" type="string">
+            <column name="cpf" length="12" not-null="true" unique="true" />
+        </property>
+        <property name="nome" type="string">
+            <column name="nome" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>
